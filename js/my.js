@@ -39,11 +39,13 @@ $(document).ready(function(){
     }
     if($('#pack-adminmgr').is(':checked')) {
       $('input[type="checkbox"]').attr("checked",false);
-      $('#tmp-standard, #tmp-artworkapproval, #tmp-artworkrequest, #tmp-customerinv, #tmp-orderack, #tmp-payment, #tmp-proforma, #tmp-po, #tmp-supplierawk, #tmp-voucher').attr("checked",true);
+      //$('#tmp-standard, #tmp-artworkapproval, #tmp-artworkrequest, #tmp-customerinv, #tmp-orderack, #tmp-payment, #tmp-proforma, #tmp-po, #tmp-supplierawk, #tmp-voucher').attr("checked",true);
+      $('#tmp-standard, #tmp-artworkapproval, #tmp-artworkrequest, #tmp-customerinv, #tmp-orderack, #tmp-payment, #tmp-proforma, #tmp-voucher').attr("checked",true); // #tmp-po, #tmp-supplierawk remmed at BH's request, 26/06/2015
     }
     if($('#pack-admin').is(':checked')) {
       $('input[type="checkbox"]').attr("checked",false);
-      $('#tmp-standard, #tmp-artworkapproval, #tmp-customerinv, #tmp-orderack, #tmp-proforma, #tmp-po, #tmp-supplierawk').attr("checked",true);
+      //$('#tmp-standard, #tmp-artworkapproval, #tmp-customerinv, #tmp-orderack, #tmp-proforma, #tmp-po, #tmp-supplierawk').attr("checked",true);
+      $('#tmp-standard, #tmp-artworkapproval, #tmp-customerinv, #tmp-orderack, #tmp-proforma').attr("checked",true); // #tmp-po, #tmp-supplierawk remmed at BH's request, 26/06/2015
     }
     if($('#pack-artwork').is(':checked')) {
       $('input[type="checkbox"]').attr("checked",false);

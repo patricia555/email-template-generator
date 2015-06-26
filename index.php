@@ -65,11 +65,11 @@ require('inc/disconnect.php');
         <input type="checkbox" id="tmp-orderack" name="tmp-orderack" value="yes"><label for="tmp-orderack">Order Ack.</label>
         <input type="checkbox" id="tmp-payment" name="tmp-payment" value="yes"><label for="tmp-payment">Payment</label>        
         <input type="checkbox" id="tmp-proforma" name="tmp-proforma" value="yes"><label for="tmp-proforma">Proforma Invoice</label>  
-        <input type="checkbox" id="tmp-po" name="tmp-po" value="yes"><label for="tmp-po">Purchase Order</label>
+        <!--<input type="checkbox" id="tmp-po" name="tmp-po" value="yes"><label for="tmp-po">Purchase Order</label> - remmed at BH's request, 26/06/2015 -->
         <input type="checkbox" id="tmp-quote" name="tmp-quote" value="yes"><label for="tmp-quote">Quotation</label>
         <input type="checkbox" id="tmp-samplecust" name="tmp-samplecust" value="yes"><label for="tmp-samplecust">Sample (Customer)</label>
         <input type="checkbox" id="tmp-samplesupp" name="tmp-samplesupp" value="yes"><label for="tmp-samplesupp">Sample (Supplier)</label>  
-        <input type="checkbox" id="tmp-supplierawk" name="tmp-supplierawk" value="yes"><label for="tmp-supplierawk">Supplier Artwork</label>
+        <!--<input type="checkbox" id="tmp-supplierawk" name="tmp-supplierawk" value="yes"><label for="tmp-supplierawk">Supplier Artwork</label> -->
         <input type="checkbox" id="tmp-usb" name="tmp-usb" value="yes"><label for="tmp-usb">USB</label>
         <input type="checkbox" id="tmp-voucher" name="tmp-voucher" value="yes"><label for="tmp-voucher">Voucher</label>
       </fieldset>
