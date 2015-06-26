@@ -1,0 +1,140 @@
+/* CSS Document */
+
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, hgroup, menu, nav, section, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}									
+
+article, aside, figure, footer, header, hgroup, nav, section {display: block;}
+
+/* Responsive images and other embedded objects
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites, like, say for Google Maps custom placemarkers. 
+   There has been a report of problems with standard Google maps as well, but we haven't been able to duplicate or diagnose the issue. */
+img,
+object,
+embed {max-width: 100%;}
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html {overflow-y: scroll;}
+
+/* we use a lot of ULs that aren't bulleted. 
+	don't forget to restore the bullets within content. */
+ul {list-style: none;}
+
+blockquote, q {quotes: none;}
+
+blockquote:before, 
+blockquote:after, 
+q:before, 
+q:after {content: ''; content: none;}
+
+a {margin: 0; padding: 0; font-size: 100%; vertical-align: baseline; background: transparent;}
+
+del {text-decoration: line-through;}
+
+abbr[title], dfn[title] {border-bottom: 1px dotted #000; cursor: help;}
+
+/* tables still need cellspacing="0" in the markup */
+table {border-collapse: collapse; border-spacing: 0;}
+th {font-weight: bold; vertical-align: bottom;}
+td {font-weight: normal; vertical-align: top;}
+
+hr {display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0;}
+
+input, select {vertical-align: middle;}
+
+pre {
+	white-space: pre; /* CSS2 */
+	white-space: pre-wrap; /* CSS 2.1 */
+	white-space: pre-line; /* CSS 3 (and 2.1 as well, actually) */
+	word-wrap: break-word; /* IE */
+}
+
+input[type="radio"] {vertical-align: text-bottom;}
+input[type="checkbox"] {vertical-align: bottom; *vertical-align: baseline;}
+.ie6 input {vertical-align: text-bottom;}
+
+select, input, textarea {font: 99% sans-serif;}
+
+table {font-size: inherit; font: 100%;}
+ 
+/* Accessible focus treatment
+	people.opera.com/patrickl/experiments/keyboard/test */
+a:hover, a:active {outline: none;}
+
+small {font-size: 85%;}
+
+strong, th {font-weight: bold;}
+
+td, td img {vertical-align: top;} 
+
+/* Make sure sup and sub don't screw with your line-heights
+	gist.github.com/413930 */
+sub, sup {font-size: 75%; line-height: 0; position: relative;}
+sup {top: -0.5em;}
+sub {bottom: -0.25em;}
+
+/* standardize any monospaced elements */
+pre, code, kbd, samp {font-family: monospace, sans-serif;}
+
+/* hand cursor on clickable elements */
+.clickable,
+label, 
+input[type=button], 
+input[type=submit], 
+button {cursor: pointer;}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button, input, select, textarea {margin: 0;}
+
+/* make buttons play nice in IE */
+button {width: auto; overflow: visible;}
+ 
+/* scale images in IE7 more attractively */
+.ie7 img {-ms-interpolation-mode: bicubic;}
+
+/* prevent BG image flicker upon hover */
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+
+/* let's clear some floats */
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; overflow: hidden; }  
+.clearfix:after { clear: both; }  
+.clearfix { zoom: 1; }  
+
+/* Reset end */
+
+html { background: #f0f0f0; }
+
+body, input, select { font-family: 'pt sans'; color: #555; font-size: 0.9em; }
+h1, h2, h3, h4, h5, h6, legend { font-family: 'Ballpark Weiner'; font-weight: normal; color: #F60; text-shadow: 0 2px 0 #FFF; line-height: 1.3em; }
+h1 { font-size: 3em; }
+h2 { font-size: 2.4em; }
+h3, legend { font-size: 2em; }
+
+#wrapper { width: 1140px; margin: 0 auto; text-shadow: 0 1px 0 #FFF; }
+
+input[type="submit"] { border: 0; border-radius: 8px; box-shadow: 0 2px 0 rgba(0,0,0,0.1); padding: 3px; background: -moz-linear-gradient(top,#0BD,#09B); color: #FFF; font-weight: bold; text-shadow: 0 2px 0 rgba(0,0,0,0.2); }
+input[type="submit"]:hover { cursor: pointer; box-shadow: 0 -2px 0 rgba(0,0,0,0.2); background: -moz-linear-gradient(top,#FC3,#DA2); text-shadow: 0 2px 0 rgba(0,0,0,0.2); position: relative; top: 2px; }
+
+nav { background: #F6F6F6; box-shadow: 0 -1px 1px rgba(0,0,0,0.1); margin: 20px 0; padding: 0 5px; }
+nav a { color: #0BD; text-decoration: none; display: inline-block; padding: 10px; }
+nav a:hover { background: -moz-linear-gradient(top,#FC3,#DA2); color: #FFF; text-shadow: 0 1px 0 rgba(0,0,0,0.2); }
+
+.index fieldset { width: 280px; padding: 20px; float: left; }
+input[type="checkbox"], input[type="radio"] { width: 20px; height: 20px; margin-right: 5px; }
+#packselect label, #templateselect label { display: inline-block; width: 175px; line-height: 2em; }
+
+#packselect { width: 200px; margin-right: 20px; float: left; }
+#templateselect { width: 200px; float: left; }
+
+#gen-submit input { font-size: 1.8em; }
+
+.createpeople form { width: 460px; }
+.createpeople label { display: inline-block; width: 160px; line-height: 2em; }
+.createpeople input, .createpeople select { width: 200px; }
+.createpeople input[type="submit"] { margin: 5px 0 0 160px; }
