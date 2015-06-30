@@ -25,8 +25,8 @@
   // fiddling about
   // get sbrown from Scott Brown, for example...
     $shortname = str_replace(' ','',strtolower(substr($person['name'],0,1)) . strtolower(substr($person['name'],strrpos($person['name'], ' '))));
-  // ...unless accounts@lsi.co.uk is your e-mail address
-    if($emaillink === "accounts@lsi.co.uk") { $shortname = 'accounts'; }
+  // ...unless accounts@lsi.co.uk is your e-mail address - rem by SB 2015-06-03. No need anymore as account controllers will have standard e-mail addresses
+    //if($emaillink === "accounts@lsi.co.uk") { $shortname = 'accounts'; }
   // Put caps in where the boss asks
     $email = ucfirst(str_replace('lsi.co.uk','LSi.co.uk',$person['email']));
   // Get lower case first name for artwork approval
@@ -142,7 +142,7 @@
   // Generated Template: Proforma Invoice
     $tProforma = $uHtmlHead . $uStart . $pStandard . $uBodyHi . $sProformaBody . $uBodyBye . $pName . $pJob . $pTel . $pMob . $uMainTel . $pEmail . $uBanner . $uFooter;          
   // Generated Template: Purchase Order - remmed at BH's request, 26/06/2015
-    $tPo = $uHtmlHead . $uStart . $pStandard . $uBodyHi . $sPoBody . $uBodyBye . $pName . $pJob . $pTel . $pMob . $uMainTel . $pEmail . $uBanner . $uFooter;
+    //$tPo = $uHtmlHead . $uStart . $pStandard . $uBodyHi . $sPoBody . $uBodyBye . $pName . $pJob . $pTel . $pMob . $uMainTel . $pEmail . $uBanner . $uFooter;
   // Generated Template: Quotation
     $tQuote = $uHtmlHead . $uStart . $pStandard . $uBodyHi . $sQuoteBody . $uBodyBye . $pName . $pJob . $pTel . $pMob . $uMainTel . $pEmail . $uBanner . $uFooter;                               
   // Generated Template: Sample (Customer)
