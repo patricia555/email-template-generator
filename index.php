@@ -63,7 +63,8 @@ require('inc/disconnect.php');
 		<input type="checkbox" id="tmp-customerinv" name="tmp-customerinv" value="yes"><label for="tmp-customerinv">Customer Invoice</label>
         <input type="checkbox" id="tmp-newacct" name="tmp-newacct" value="yes"><label for="tmp-newacct">New Account</label>
         <input type="checkbox" id="tmp-orderack" name="tmp-orderack" value="yes"><label for="tmp-orderack">Order Ack.</label>
-        <input type="checkbox" id="tmp-payment" name="tmp-payment" value="yes"><label for="tmp-payment">Payment</label>        
+        <input type="checkbox" id="tmp-payment" name="tmp-payment" value="yes"><label for="tmp-payment">Payment</label>
+        <input type="checkbox" id="tmp-penwarehouse" name="tmp-penwarehouse" value="yes"><label for="tmp-penwarehouse">Pen Warehouse PO/Artwork</label>
         <input type="checkbox" id="tmp-proforma" name="tmp-proforma" value="yes"><label for="tmp-proforma">Proforma Invoice</label>  
         <!--<input type="checkbox" id="tmp-po" name="tmp-po" value="yes"><label for="tmp-po">Purchase Order</label> - remmed at BH's request, 26/06/2015 -->
         <input type="checkbox" id="tmp-quote" name="tmp-quote" value="yes"><label for="tmp-quote">Quotation</label>

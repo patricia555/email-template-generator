@@ -47,6 +47,7 @@
   if(isset($_POST['tmp-newacct'])) { $tmp_newacct = $_POST['tmp-newacct']; }
   if(isset($_POST['tmp-orderack'])) { $tmp_orderack = $_POST['tmp-orderack']; }
   if(isset($_POST['tmp-payment'])) { $tmp_payment = $_POST['tmp-payment']; }        
+  if(isset($_POST['tmp-penwarehouse'])) { $tmp_penwarehouse = $_POST['tmp-penwarehouse']; }        
   if(isset($_POST['tmp-proforma'])) { $tmp_proforma = $_POST['tmp-proforma']; }  
   if(isset($_POST['tmp-po'])) { $tmp_po = $_POST['tmp-po']; }
   if(isset($_POST['tmp-quote'])) { $tmp_quote = $_POST['tmp-quote']; }
@@ -105,6 +106,8 @@
       $sOrderackBody = '<p style="font-family:calibri,arial,helvetica,sans-serif;font-size:11pt;color:#595F51"><b>Order ref LS</b></p><p style="font-family:calibri,arial,helvetica,sans-serif;font-size:11pt;color:#595F51">Thank you for your recent order. Attached is your order acknowledgement.</p><p style="font-family:calibri,arial,helvetica,sans-serif;font-size:11pt;color:#595F51">Please check that all your instructions have been interpreted correctly. <font color="#CC0000"><b><i>**Although every effort is made to ensure all information is correct, LSi Ltd cannot be held responsible for any errors, alterations or omissions brought to our attention after your order has been delivered.**</i></b></font></p><p style="font-family:calibri,arial,helvetica,sans-serif;font-size:11pt;color:#595F51">You do not need to reply to this e-mail unless there are discrepancies regarding delivery, price etc.</p><p style="font-family:calibri,arial,helvetica,sans-serif;font-size:11pt;color:#595F51">Thanks once again for your order.</p>';
     // Payment
       $sPaymentBody = '<p style="font-family:calibri,arial,helvetica,sans-serif;font-size:11pt;color:#595F51">Order Ref: LS</p><p style="font-family:calibri,arial,helvetica,sans-serif;font-size:11pt;color:#595F51">Many thanks for your recent order. Attached is your Pro Forma invoice which we require full payment in order to progress your order further.</p><p style="font-family:calibri,arial,helvetica,sans-serif;font-size:16px;color:#595F51"><b>Payment Methods</b></p><table cellspacing="0" cellpadding="0" style="font-family:calibri,arial,helvetica,sans-serif;font-size:11pt;color:#595F51"><tbody><tr> <td width="111" valign="top"> <img width="111" height="33" alt="Credit Card" src="http://www.lsi.co.uk/util/email/img/card.gif"></td> <td width="10"></td> <td valign="top"><p style="font-family:calibri,arial,helvetica,sans-serif;font-size:11pt;color:#595F51"><b>Credit Card</b><br>Please contact us in order to process your payment. Once the card details are accepted, your order will be processed.</p></td></tr></tbody></table> <br><table cellspacing="0" cellpadding="0" style="font-family:calibri,arial,helvetica,sans-serif;font-size:11pt;color:#595F51"><tbody><tr> <td width="111" valign="top"> <img width="111" height="33" alt="bacs" src="http://www.lsi.co.uk/util/email/img/bacs.gif"></td> <td width="10"></td> <td valign="top"><p style="font-family:calibri,arial,helvetica,sans-serif;font-size:11pt;color:#595F51"><b>BACS</b><br>Will take 3 days for funds to be transferred, please provide a remittance statement in order for your order to be processed.</p></td></tr></tbody></table> <br><table cellspacing="0" cellpadding="0" style="font-family:calibri,arial,helvetica,sans-serif;font-size:11pt;color:#595F51"><tbody><tr> <td width="111" valign="top"> <img width="111" height="33" alt="Cheque" src="http://www.lsi.co.uk/util/email/img/cheque.gif"></td> <td width="10"></td> <td valign="top"><p style="font-family:calibri,arial,helvetica,sans-serif;font-size:11pt;color:#595F51"><b>Cheque</b><br>Will take 3 days to clear, once we have received the cheque your order will be processed, however, the order will be put on hold if funds do not clear.</p></td></tr></tbody></table><p style="font-family:calibri,arial,helvetica,sans-serif;font-size:11pt;color:#CC0000"><b>Please Note:</b> Orders will only be processes once we have received payment. If your order is required for a specific date, we will require payment immediately.</p><p style="font-family:calibri,arial,helvetica,sans-serif;font-size:11pt;color:#CC0000">Once we have received payment, a paid receipt will be emailed to confirm receipt.</p><p style="font-family:calibri,arial,helvetica,sans-serif;font-size:11pt;color:#595F51">If you have any queries regarding this or wish to make payment through an alternative method, please do not hesitate to contact myself or Accounts on 01274 854982.</p>';
+	// Pen Warehouse PO/Artwork
+	  $sPenwarehouseBody = '<p style="font-family:calibri,arial,helvetica,sans-serif;font-size:11pt;color:#595F51">Please find attached purchase order and artwork request form which includes the artwork file and instructions.</p><p style="font-family:calibri,arial,helvetica,sans-serif;font-size:11pt;color:#595F51"><strong>**Please proof artwork on our LSI template**</strong></p><p style="font-family:calibri,arial,helvetica,sans-serif;font-size:11pt;color:#FF0000"><strong>**Please deliver under LSI cover using the attached Despatch Note, and advise us of any overs at the time of despatch**</strong></p><p style="font-family:calibri,arial,helvetica,sans-serif;font-size:11pt;color:#FF0000">**Please acknowledge our order at your earliest convenience.</p><p style="font-family:calibri,arial,helvetica,sans-serif;font-size:11pt;color:#595F51">Should you have any problems please do not hesitate to contact me.</p>';
     // Proforma Invoice
       $sProformaBody = '<p style="font-family:calibri,arial,sans-serif;color:#595F51;font-size:11pt;">Order Ref: LS</p><p style="font-family:calibri,arial,sans-serif;color:#595F51;font-size:11pt;">Many thanks for your recent order. Please find attached your Pro Forma invoice for which we require full payment to enable us to progress your order.</p><p style="font-family:calibri,arial,sans-serif;color:#595F51;font-size:11pt;font-weight:bold">Your requested delivery date is __________</p><p style="font-family:calibri,arial,sans-serif;color:#595F51;font-size:11pt;font-weight:bold">We would require cleared funds no later than ________ to ensure there is no delay in processing your order due to late payment. Should funds not be received by the above date your requested delivery date will be affected.</p><p style="font-family:calibri,arial,sans-serif;color:#595F51;font-size:11pt;">Below lists the preferred payment methods and the timescales for funds to clear.</p><p style="font-family:calibri,arial,sans-serif;color:#595F51;font-size:15px;"><b>Payment Methods</b></p><table cellspacing="0" cellpadding="0" style="font-family:calibri,arial,helvetica,sans-serif;font-size:11pt;color:#595F51"><tbody><tr> <td width="111" valign="top"> <img width="111" height="33" alt="Credit Card" src="http://www.lsi.co.uk/util/email/img/card.gif"></td> <td width="10"></td> <td valign="top"><p style="font-family:calibri,arial,sans-serif;color:#595F51;font-size:11pt;"><b>Credit Card</b><br>Please contact us with your card details and once the payment has been accepted, your order will be processed immediately.</p></td></tr></tbody></table> <br><table cellspacing="0" cellpadding="0" style="font-family:calibri,arial,helvetica,sans-serif;font-size:11pt;color:#595F51"><tbody><tr> <td width="111" valign="top"> <img width="111" height="33" alt="bacs" src="http://www.lsi.co.uk/util/email/img/bacs.gif"></td> <td width="10"></td> <td valign="top"><p style="font-family:calibri,arial,sans-serif;color:#595F51;font-size:11pt;"><b>BACS</b><br>Will take 3 working days for funds to be transferred. Please provide a remittance advice to enable your order to be processed.</p></td></tr></tbody></table> <br><table cellspacing="0" cellpadding="0" style="font-family:calibri,arial,helvetica,sans-serif;font-size:11pt;color:#595F51"><tbody><tr> <td width="111" valign="top"> <img width="111" height="33" alt="Cheque" src="http://www.lsi.co.uk/util/email/img/cheque.gif"></td> <td width="10"></td> <td valign="top"><p style="font-family:calibri,arial,sans-serif;color:#595F51;font-size:11pt;"><b>Cheque</b><br>Will take 3 working days to clear. Only when we have received cleared funds will your order be progressed.</p></td></tr></tbody></table><p style="font-family:calibri,arial,sans-serif;color:#990000;font-size:15px;"><b>Please Note:</b> LSi will not progress any artwork, order stock or secure print schedules until payment is received.</p><p style="font-family:calibri,arial,sans-serif;color:#595F51;font-size:11pt;">Once we have received payment, a paid receipt will be emailed to confirm receipt.</p><p style="font-family:calibri,arial,sans-serif;color:#595F51;font-size:11pt;font-weight:bold;">If you have any queries regarding this or wish to make payment through an alternative method, please do not hesitate to contact myself or Accounts on 01274 854982.</p>';
     // Purchase Order - remmed at BH's request, 26/06/2015
@@ -138,7 +141,9 @@
   // Generated Template: Order Acknowledgement
     $tOrderack = $uHtmlHead . $uStart . $pStandard . $uBodyHi . $sOrderackBody . $uBodyBye . $pName . $pJob . $pTel . $pMob . $uMainTel . $pEmail . $uBanner . $uFooter;          
   // Generated Template: Payment
-    $tPayment = $uHtmlHead . $uStart . $pStandard . $uBodyHi . $sPaymentBody . $uBodyBye . $pName . $pJob . $pTel . $pMob . $uMainTel . $pEmail . $uBanner . $uFooter;            
+    $tPayment = $uHtmlHead . $uStart . $pStandard . $uBodyHi . $sPaymentBody . $uBodyBye . $pName . $pJob . $pTel . $pMob . $uMainTel . $pEmail . $uBanner . $uFooter;             
+  // Generated Template: Pen Warehouse PO/Artwork
+    $tPenwarehouse = $uHtmlHead . $uStart . $pStandard . $uBodyHi . $sPenwarehouseBody . $uBodyBye . $pName . $pJob . $pTel . $pMob . $uMainTel . $pEmail . $uBanner . $uFooter;            
   // Generated Template: Proforma Invoice
     $tProforma = $uHtmlHead . $uStart . $pStandard . $uBodyHi . $sProformaBody . $uBodyBye . $pName . $pJob . $pTel . $pMob . $uMainTel . $pEmail . $uBanner . $uFooter;          
   // Generated Template: Purchase Order - remmed at BH's request, 26/06/2015
@@ -385,6 +390,28 @@
     }
     else {
       echo "<p>The file $tPaymentOut is not writable.</p>";
+    }  
+  }
+
+// If 'Pen Warehouse PO/Artwork' is selected...
+  if(isset($tmp_penwarehouse)) {
+    $tPenwarehouseOut = 'generated_tpl/' . strtoupper(substr($shortname, 0, 2)) . substr($shortname, 2) . ' - Pen Warehouse (P).html';
+    fopen($tPenwarehouseOut,'w');
+    if(is_writeable($tPenwarehouseOut)){
+      if(!$handle = fopen($tPenwarehouseOut,'w')){
+        echo "<p>Cannot open file $tPenwarehouseOut.</p>";
+        exit;
+      }
+      if(fwrite($handle, $tPenwarehouse) === FALSE) {
+        echo "<p>Cannot write to file $tPenwarehouseOut.</p>";
+      }
+      
+      echo "<p>Success! $tPenwarehouseOut has been created.</p>";
+      
+      fclose($handle);
+    }
+    else {
+      echo "<p>The file $tPenwarehouseOut is not writable.</p>";
     }  
   }
   
